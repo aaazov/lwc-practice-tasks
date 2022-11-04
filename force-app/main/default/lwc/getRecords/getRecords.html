@@ -1,11 +1,24 @@
 <template>
     <lightning-card title="Selected Records">
         <template if:true={selectedRecordIds}>
-            <template for:each={records.data} for:item="record">
+            <a 
+            target="__self"  
+            class="slds-button"
+            download="selectedContacts.csv"
+            href={hrefdata}
+            onclick={exportToCSV}
+            style="margin-left:80%;">
+                Download Excel
+            </a>
+            <template for:each={records.data} for:item="record" >
                 <ul key={record.Id}>
-                  <li>{record.Id} {record.Name} {record.Title}</li>
+                    <li>
+                        {record.Name}
+                        {record.Id}
+                        </br>
+                    </li>
                 </ul>
-              </template>
+            </template>
         </template>
     </lightning-card>   
 </template>
