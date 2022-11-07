@@ -6,16 +6,13 @@
             class="slds-button"
             download="selectedContacts.csv"
             href={hrefdata}
-            onclick={exportToCSV}
-            style="margin-left:80%;">
-                Download Excel
+            onclick={exportToCSV}>
+                Download csv
             </a>
             <template for:each={records.data} for:item="record" >
                 <ul key={record.Id}>
                     <li>
-                        {record.Name}
-                        {record.Id}
-                        </br>
+                        {record.Id}{record.Name}
                     </li>
                 </ul>
             </template>
