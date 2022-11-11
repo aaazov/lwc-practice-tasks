@@ -9,7 +9,7 @@
             <target>lightning__Tab</target>
         </targets>
         <targetConfigs>
-            <targetConfig targets="lightning__Tab, lightning__HomePage, lightning__RecordPage, lightning__AppPage">
+            <targetConfig targets="lightning__HomePage, lightning__RecordPage, lightning__AppPage">
                 <property name="objectName" type="String" label="Object Name" 
                         description="Table header according to the tab"/>
             </targetConfig>
