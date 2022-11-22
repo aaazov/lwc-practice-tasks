@@ -1,20 +1,19 @@
 <template>
-    <p>This is displayMappingData component</p>
     <lightning-tabset variant="scoped">
         <lightning-tab 
         for:each={objectNames} 
         for:item="objectName" 
         label={objectName}
-        key={objectNameindex}
+        key={objectName.index}
         onactive={handleActive}>
-            <table 
+            <!-- <table 
             class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
                 <thead>
                     <tr class="slds-line-height_reset">
                         <th 
                         class="" 
                         scope="col" 
-                        for:each={tableHeader} 
+                        for:each={columns} 
                         for:item="column" 
                         key={column.index}>
                             <div class="slds-truncate" title={column}>
@@ -26,8 +25,12 @@
                 <tbody>
                     
                 </tbody>
-            </table>
+            </table> -->
+            <lightning-datatable
+            key-field="id"
+            columns={columns}
+            data={data}>
+            </lightning-datatable>
         </lightning-tab>
-       
     </lightning-tabset>
 </template>
